@@ -8,6 +8,7 @@ export default function CharacterCard(props) {
 	const MyDiv = styled.div`
 		border: 3px solid skyblue;
 		decoration: none;
+		width: auto;
 		margin: 2%;
 		padding: 2%;
 		background-color: limegreen;
