@@ -11,9 +11,10 @@ const Character = props => {
 		axios
 			.get(`https://rickandmortyapi.com/api/character/${id}`)
 			.then(res => {
-                let char = res.data.results
+				console.log(res);
+				let char = res.data;
 				setChar(char);
-				console.log(id)
+				console.log(char);
 			})
 			.catch(error => {
 				console.error(error);
@@ -24,9 +25,7 @@ const Character = props => {
 		return <div>Loading character...</div>;
 	}
 
-	return (
-			<CharacterCard char={char} />
-	);
+	return <CharacterCard char={char} />;
 };
 
 export default Character;

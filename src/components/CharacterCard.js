@@ -1,12 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 export default function CharacterCard(props) {
 	const { image, name, status, species, gender, id } = props.char;
-	console.log(name);
+
+	const MyDiv = styled.div`
+		border: 3px solid skyblue;
+		decoration: none;
+		margin: 2%;
+		padding: 2%;
+		background-color: limegreen;
+	`;
+
 	return (
 		<Link to={`/characters/${id}`}>
-			<span>
+			<MyDiv>
 				<img src={image} alt="" />
 				<h3>Name: {name}</h3>
 				<ul>
@@ -14,7 +23,7 @@ export default function CharacterCard(props) {
 					<li>Species: {species}</li>
 					<li>Gender: {gender}</li>
 				</ul>
-			</span>
+			</MyDiv>
 		</Link>
 	);
 }
